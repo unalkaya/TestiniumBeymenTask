@@ -22,17 +22,14 @@ public class NewsPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//article")));
     }
 
-    public void waitForPageLoad(){
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(@class, 'post-block__title__link')]")));
-
-
-    }
 
     public String getArticleTitle() {
         return driver.getTitle();
     }
 
     public List<WebElement> getLinksInArticle() {
+
+
         return driver.findElements(By.xpath("//article//a"));
     }
 }

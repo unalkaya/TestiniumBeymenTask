@@ -21,16 +21,6 @@ public class HomePage {
         return driver.findElements(By.xpath("//article[contains(@class, 'post-block')]"));
     }
 
-   /* public boolean hasAuthor(WebElement article) {
-        List<WebElement> authors = article.findElements(By.xpath(".//span[contains(@class, 'river-byline__authors')]"));
-        return !authors.isEmpty();
-    }*/
-
-    public boolean hasImage(WebElement article) {
-        List<WebElement> images = article.findElements(By.xpath(".//img"));
-        return !images.isEmpty();
-    }
-
     public WebElement getFirstNewsLink() {
         return driver.findElement(By.xpath("(//article[contains(@class, 'post-block')]//a[contains(@class, 'post-block__title__link')])[1]"));
     }
